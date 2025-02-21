@@ -1,4 +1,6 @@
 -- Inspired by Redz
+print("[Utils] Loading script, please wait..")
+
 --> Services <--
 local VirtualInputManager = game:GetService("VirtualInputManager")
 local RbxAnalyticsService = game:GetService("RbxAnalyticsService")
@@ -40,7 +42,7 @@ function Utils:GetEnemy(EnemyFolder: Folder, Enemy_Name: string)
     return false
 end
 
-function Utils:GetFarmCFrame(Side, Distance)
+function Utils:GetFarmCFrame(Side: string, Distance: number)
     if Side == "Over" then
         return CFrame.new(0, Distance, 0) * CFrame.Angles(math.rad(-90), 0, 0)
     elseif Side == "Under" then
@@ -95,5 +97,7 @@ function Utils:ActivateTool()
         end
     end
 end
+
+print("[Utils] Script successfully loaded!")
 
 return Utils
