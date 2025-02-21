@@ -41,7 +41,7 @@ function Load()
             print("[Loader] Failed to loadstring..")
         end
     else
-        print("[Loader] Invaild Path..")
+        print("[Loader] Invalid Path..")
     end
 end
 
