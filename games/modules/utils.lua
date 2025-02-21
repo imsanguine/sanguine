@@ -1,3 +1,4 @@
+-- Inspired by Redz
 --> Services <--
 local VirtualInputManager = game:GetService("VirtualInputManager")
 local RbxAnalyticsService = game:GetService("RbxAnalyticsService")
