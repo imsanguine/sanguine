@@ -10,3 +10,7 @@
 + ⚡Fast & frequently updates
 + 🎮Support multiple games
 + ✏️Sastifying & very smooth UIs
+
+## Socials:
++ Discord: [Click Here](https://discord.gg/sanguinehub)
++ Youtube: [Click Here](https://www.youtube.com/@therealptg)
