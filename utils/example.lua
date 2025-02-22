@@ -27,17 +27,29 @@ function Utils:IsAlive(Character: Model)
 end
 
 function Utils:GetEnemy(EnemyFolder: Folder, Enemy_Name: string)
-    if EnemyFolder and Enemy_Name then
-        local Enemy = EnemyFolder:FindFirstChild(Enemy_Name)
-        if self:IsAlive(Enemy) then
-            return Enemy
-        end
-        for _, Enemy in ipairs(EnemyFolder:GetChildren()) do
-            if (not Enemy_Name or Enemy_Name == Enemy.Name) and self:IsAlive(Enemy) then
+    if EnemyFolder then
+        if Enemy_Name then
+            local Enemy = EnemyFolder:FindFirstChild(Enemy_Name)
+            if self:IsAlive(Enemy) then
                 return Enemy
             end
+            for _, Enemy in ipairs(EnemyFolder:GetChildren()) do
+                if (not Enemy_Name or Enemy_Name == Enemy.Name) and self:IsAlive(Enemy) then
+                    return Enemy
+                end
+            end
+            return false
+        else
+            local Enemy = EnemyFolder:FindFirstChildOfClass("Model")
+            if Enemy and self:IsAlive(Enemy) then
+                return Enemy
+            end
+            for _, Enemy in ipairs(EnemyFolder:GetChildren()) do
+                if self:IsAlive(Enemy) then
+                    return Enemy
+                end
+            end
         end
-        return false
     end
     return false
 end
