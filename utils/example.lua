@@ -91,7 +91,7 @@ end
 
 function Utils:FireProximityPrompt(ProximityPrompt: ProximityPrompt)
     ProximityPrompt:InputHoldBegin()
-    delay(ProximityPrompt.HoldDuration, function()
+    task.delay(ProximityPrompt.HoldDuration, function()
         ProximityPrompt:InputHoldEnd()
     end)
 end
