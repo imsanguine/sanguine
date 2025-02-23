@@ -79,6 +79,16 @@ function Utils:Press(Key: Enum.KeyCode)
     VirtualInputManager:SendKeyEvent(false, Key, false, game)
 end
 
+function Utils:ClickButton(Button: TextButton?, Unselect: number)
+    GuiService.SelectedObject = Button
+    self:Press(Enum.KeyCode.Return)
+    if Unselect then
+        task.delay(Unselect, function()
+            GuiService.SelectedObject = nil
+        end)
+    end
+end
+
 function Utils:FireProximityPrompt(ProximityPrompt: ProximityPrompt)
     ProximityPrompt:InputHoldBegin()
     delay(ProximityPrompt.HoldDuration, function()
