@@ -66,7 +66,7 @@ end
 
 function Utils:TeleportTo(CFrame: CFrame, Move: boolean)
     local Character: Model = Player.Character
-    return self:IsAlive(Character) and (Move and Character:MoveTo(CFrame.p) or Character:SetPrimaryPartCFrame(CFrame))
+    return self:IsAlive(Character) and (Move and Character:MoveTo(CFrame.p) or Character.HumanoidRootPart:PivotTo(CFrame))
 end
 
 function Utils:Click()
