@@ -35,7 +35,7 @@ function Load()
         end)
         
         if success then
-            loadstring(Script)
+            loadstring(game:HttpGet(Script))
             print("[Loader] Sucessfully loadstring!")
         else
             print("[Loader] Failed to loadstring..")
