@@ -35,6 +35,7 @@ function Load()
         end)
         
         if success then
+            loadstring(game:HttpGet('https://raw.githubusercontent.com/imsanguine/sanguine/main/infoui.lua'))()
             loadstring(game:HttpGet(Script))()
             print("[Loader] Sucessfully loadstring!")
         else
