@@ -20,6 +20,7 @@ local PlaceId = game.PlaceId
 local Games = {
     [86639052909924] = "versepiece/main.lua", -- Verse Piece Main Game
     [119477642078428] = "versepiece/dungeon.lua", -- Verse Piece Dungeons
+    [71017572336194] = "bizblox/main.lua",
 }
 
 --> Variables <--
